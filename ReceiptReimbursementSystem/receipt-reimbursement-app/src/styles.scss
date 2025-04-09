@@ -1,0 +1,104 @@
+/* Enhanced styling */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Improved navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: linear-gradient(to right, #4e54c8, #5a67d8) !important;
+  padding: 0.8rem 1rem;
+}
+
+/* Enhanced cards */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0 !important;
+  font-weight: 600;
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ddd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(74, 103, 233, 0.15);
+  border-color: #5a67d8;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #5a67d8;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background: #4e54c8;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Status badges */
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+/* Table styling */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 6px;
+  border: none;
+  padding: 1rem;
+}
+
+/* File upload */
+input[type="file"] {
+  border: 1px dashed #ced4da;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  background: #f8f9fa;
+}

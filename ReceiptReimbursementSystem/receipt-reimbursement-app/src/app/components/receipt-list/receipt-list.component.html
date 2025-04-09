@@ -1,0 +1,78 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">My Submitted Receipts</h3>
+          <a routerLink="/receipts/new" class="btn btn-light">Submit New Receipt</a>
+        </div>
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search receipts...">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select">
+                <option selected>All Statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select">
+                <option selected>Sort by Date</option>
+                <option value="amount">Sort by Amount</option>
+                <option value="status">Sort by Status</option>
+              </select>
+            </div>
+          </div>
+          
+          <div *ngIf="error" class="alert alert-danger">
+            {{ error }}
+          </div>
+          
+          <div *ngIf="loading" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          
+          <div *ngIf="!loading && receipts.length === 0" class="alert alert-info">
+            No receipts have been submitted yet.
+          </div>
+          
+          <div *ngIf="!loading && receipts.length > 0">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let receipt of receipts">
+                    <td>{{ receipt.id }}</td>
+                    <td>{{ receipt.purchaseDate | date:'mediumDate' }}</td>
+                    <td>${{ receipt.amount | number:'1.2-2' }}</td>
+                    <td>{{ receipt.description }}</td>
+                    <td><span [class]="getStatusClass(receipt.status)">{{ receipt.status }}</span></td>
+                    <td>{{ receipt.submissionDate | date:'short' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

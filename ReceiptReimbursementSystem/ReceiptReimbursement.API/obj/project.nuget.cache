@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VmEAc70Ar8A=",
+  "success": true,
+  "projectFilePath": "/Users/saisandeepmaripala/ReceiptReimbursementSystem/ReceiptReimbursement.API/ReceiptReimbursement.API.csproj",
+  "expectedPackageFiles": [
+    "/Users/saisandeepmaripala/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "/Users/saisandeepmaripala/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
