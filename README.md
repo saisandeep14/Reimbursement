@@ -3,11 +3,13 @@ Receipt Reimbursement System
 A web application for university employees to submit and track receipt reimbursements. This system features a responsive user interface, file uploads, and persistent data storage.
 
 How to Run the Application
+
 Prerequisites
 •	Node.js (v14+)
 •	npm (v6+)
 
 Backend Setup
+
 1.	Navigate to the backend directory:
     cd receipt-reimbursement-api
   	
@@ -20,6 +22,7 @@ The API server will run on http://localhost:3000
 
 
 Frontend Setup
+
 1.	Navigate to the frontend directory:
     cd receipt-reimbursement-app
   	
